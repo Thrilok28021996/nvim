@@ -26,6 +26,5 @@ mv ~/.cache/nvim{,.bak}
 
 
 1. Clone the git repository to the .config folder
-2. Add the . to the lua style file as it is a dot file
-3. Then run the nvim command in the terminal
-4. It will download all the plugins for the neovim setup
+2. Then run the nvim command in the terminal
+3. It will download all the plugins for the neovim setup
