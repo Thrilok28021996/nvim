@@ -24,6 +24,15 @@ mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 
+## Requirements
+- Neovim >= 0.9.0 (needs to be built with LuaJIT)
+- Git >= 2.19.0 (for partial clones support)
+- a Nerd Font(v3.0 or greater) (optional, but needed to display some icons)
+- lazygit (optional)
+- a C compiler for nvim-treesitter. See here
+- for telescope.nvim (optional)
+  - live grep: ripgrep
+  - find files: fd
 
 1. Clone the git repository to the .config folder
 2. Then run the nvim command in the terminal
