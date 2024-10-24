@@ -107,7 +107,7 @@ return { -- LSP Configuration & Plugins
 
     -- Enable the following language servers
     local servers = {
-      html = { filetypes = { 'html', 'twig', 'hbs' } },
+      -- html = { filetypes = { 'html', 'twig', 'hbs' } },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       -- tsserver = {},
       lua_ls = {
@@ -137,7 +137,7 @@ return { -- LSP Configuration & Plugins
         },
       },
       -- dockerls = {},
-      docker_compose_language_service = {},
+      -- docker_compose_language_service = {},
       pylsp = {
         settings = {
           pylsp = {
@@ -211,9 +211,9 @@ return { -- LSP Configuration & Plugins
       },
       --tailwindcss = {},
       -- jsonls = {},
-      sqlls = {},
+      -- sqlls = {},
       -- terraformls = {},
-      yamlls = {},
+      -- yamlls = {},
       bashls = {},
       -- graphql = {},
       -- cssls = {},

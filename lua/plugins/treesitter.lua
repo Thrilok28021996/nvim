@@ -11,21 +11,21 @@ return {
       ensure_installed = {
         'lua',
         'python',
-        'javascript',
-        'typescript',
+        -- 'javascript',
+        -- 'typescript',
         'vimdoc',
         'vim',
         'regex',
-        'terraform',
-        'sql',
+        -- 'terraform',
+        -- 'sql',
         'dockerfile',
         'toml',
         'json',
-        'java',
-        'groovy',
-        'go',
+        -- 'java',
+        -- 'groovy',
+        -- 'go',
         'gitignore',
-        'graphql',
+        -- 'graphql',
         'yaml',
         'make',
         'cmake',
@@ -42,6 +42,7 @@ return {
 
       highlight = { enable = true },
       indent = { enable = true },
+      fold = { enable = true },
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -98,9 +99,9 @@ return {
     }
 
     -- Register additional file extensions
-    vim.filetype.add { extension = { tf = 'terraform' } }
-    vim.filetype.add { extension = { tfvars = 'terraform' } }
-    vim.filetype.add { extension = { pipeline = 'groovy' } }
-    vim.filetype.add { extension = { multibranch = 'groovy' } }
+    -- vim.filetype.add { extension = { tf = 'terraform' } }
+    -- vim.filetype.add { extension = { tfvars = 'terraform' } }
+    -- vim.filetype.add { extension = { pipeline = 'groovy' } }
+    -- vim.filetype.add { extension = { multibranch = 'groovy' } }
   end,
 }
