@@ -41,6 +41,6 @@ require('lazy').setup {
   require 'plugins.debug',
   require 'plugins.toggleterm',
   require 'plugins.obsidian',
-  require 'plugins.nvim-ufo',
+  -- require 'plugins.nvim-ufo',
   require 'plugins.noice',
 }

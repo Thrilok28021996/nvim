@@ -33,7 +33,7 @@ vim.o.showmode = false                               -- we don't need to see thi
 vim.o.showtabline = 2                                -- always show tabs
 vim.o.backspace = 'indent,eol,start'                 -- allow backspace on
 vim.o.pumheight = 10                                 -- pop up menu height
-vim.o.conceallevel = 0                               -- so that `` is visible in markdown files
+vim.o.conceallevel = 2                               -- so that `` is visible in markdown files
 vim.o.fileencoding = 'utf-8'                         -- the encoding written to a file
 vim.o.cmdheight = 1                                  -- more space in the neovim command line for displaying messages
 vim.o.autoindent = true                              -- copy indent from current line when starting new one
@@ -45,11 +45,10 @@ vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins fro
 -- Folding the code
 vim.opt.foldmethod = 'indent'
 -- -- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.opt.foldcolumn = '1'
+vim.opt.foldcolumn = 'auto'
 vim.opt.foldtext = ''
 vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
+vim.opt.foldlevelstart = 1
 vim.opt.foldnestmax = 4
-
---- Markdown
-vim.opt.conceallevel = 2
+vim.opt.foldclose = 'all'
+vim.opt.fillchars:append 'fold:*'
