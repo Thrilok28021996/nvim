@@ -11,36 +11,26 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins you can run
---    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
-  require 'plugins.neotree',
-  require 'plugins.colortheme',
-  require 'plugins.bufferline',
-  require 'plugins.lualine',
-  require 'plugins.treesitter',
-  require 'plugins.telescope',
-  require 'plugins.lsp',
+
+  require 'plugins.alpha',
   require 'plugins.autocompletion',
   require 'plugins.autoformatting',
-  require 'plugins.gitsigns',
-  require 'plugins.alpha',
-  require 'plugins.indent-blankline',
-  require 'plugins.misc',
+  require 'plugins.bufferline',
+  require 'plugins.colortheme',
   require 'plugins.comment',
+  require 'plugins.gitsigns',
+  require 'plugins.indent-blankline',
   require 'plugins.lazygit',
-  require 'plugins.debug',
-  require 'plugins.toggleterm',
-  require 'plugins.obsidian',
-  -- require 'plugins.nvim-ufo',
+  require 'plugins.lsp',
+  require 'plugins.lualine',
+  require 'plugins.misc',
+  require 'plugins.neotree',
   require 'plugins.noice',
+  require 'plugins.obsidian',
+  require 'plugins.telescope',
+  require 'plugins.toggleterm',
+  require 'plugins.treesitter',
 }

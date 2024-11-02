@@ -1,4 +1,5 @@
 -- Format on save and linters
+-- Format on save and linters
 return {
   'nvimtools/none-ls.nvim',
   dependencies = {
@@ -13,12 +14,10 @@ return {
     -- list of formatters & linters for mason to install
     require('mason-null-ls').setup {
       ensure_installed = {
-        -- "checkmake", -- Linter for Makefile
-        -- "prettier", -- ts/js formatter
+
         'stylua', -- lua formatter
-        -- "eslint_d", -- ts/js linter
-        --'shfmt', --shell formatter
-        'ruff', -- Python linter and formatter
+
+        'ruff',   -- Python linter and formatter
       },
       -- auto-install configured formatters & linters (with null-ls)
       automatic_installation = true,
@@ -28,8 +27,7 @@ return {
       diagnostics.checkmake,
       formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown' } },
       formatting.stylua,
-      --formatting.shfmt.with({ args = { "-i", "4" } }),
-      --formatting.terraform_fmt,
+
       require('none-ls.formatting.ruff').with { extra_args = { '--extend-select', 'I' } },
       require 'none-ls.formatting.ruff_format',
     }

@@ -132,12 +132,12 @@ return { -- LSP Configuration & Plugins
               callSnippet = 'Replace',
             },
             telemetry = { enable = false },
-            diagnostics = { disable = { 'missing-fields' } },
+            -- diagnostics = { disable = { 'missing-fields' } },
+            diagnostics = { enable = false },
           },
         },
       },
-      -- dockerls = {},
-      -- docker_compose_language_service = {},
+
       pylsp = {
         settings = {
           pylsp = {
@@ -198,23 +198,12 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
-      rust_analyzer = {
-        ['rust-analyzer'] = {
-          cargo = {
-            features = 'all',
-          },
-          checkOnSave = true,
-          check = {
-            command = 'clippy',
-          },
-        },
-      },
       --tailwindcss = {},
       -- jsonls = {},
       -- sqlls = {},
       -- terraformls = {},
       -- yamlls = {},
-      bashls = {},
+      -- bashls = {},
       -- graphql = {},
       -- cssls = {},
       -- ltex = {},
