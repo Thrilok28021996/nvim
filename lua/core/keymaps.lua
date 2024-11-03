@@ -10,18 +10,16 @@ local map = vim.keymap.set
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Allow moving the cursor through wrapped lines with j, k
-map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
 -- clear highlights
 map('n', '<Esc>', ':noh<CR>', opts)
 
 -- save file
 map('n', '<C-s>', '<cmd> w <CR>', opts)
-
+-- -- Comment
+map('n', '<C-/>', 'gcc', { desc = 'toggle comment', remap = true })
+map('v', '<C-/>', 'gc', { desc = 'toggle comment', remap = true })
 -- save file without auto-formatting
---[[ map('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts) ]]
+-- [[ map('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts) ]]
 
 -- quit file
 map('n', '<C-q>', '<cmd> q <CR>', opts)
@@ -80,6 +78,3 @@ map('n', '<leader>sr', [[:%s///gc<Left><Left><Left>]], { desc = 'Prompted search
 -- Explicitly yank to system clipboard (highlighted and entire row)
 map({ 'n', 'v' }, '<leader>y', [["+y]])
 map('n', '<leader>Y', [["+Y]])
-
-
-

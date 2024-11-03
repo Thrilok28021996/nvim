@@ -14,14 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
-
   require 'plugins.alpha',
   require 'plugins.autocompletion',
   require 'plugins.autoformatting',
   require 'plugins.bufferline',
   require 'plugins.colortheme',
-  require 'plugins.comment',
+  --require 'plugins.comment',
   require 'plugins.gitsigns',
+  require 'plugins.iron',
   require 'plugins.indent-blankline',
   require 'plugins.lazygit',
   require 'plugins.lsp',

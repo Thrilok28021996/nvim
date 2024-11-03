@@ -3,20 +3,20 @@ return {
   'numToStr/Comment.nvim',
   opts = {},
   config = function()
-    local opts = { noremap = true, silent = true }
-    vim.keymap.set('n', '<C-/>', require('Comment.api').toggle.linewise.current, opts)
+    require('Comment').setup {
+      mappings = {
+        basic = false, -- Disable basic mappings
+        extra = false, -- Disable extra mappings
+      },
+    }
+    local options = { noremap = true, silent = true }
+    vim.keymap.set('n', '<C-/>', require('Comment.api').toggle.linewise.current, options)
 
-    vim.keymap.set('v', '<C-/>', function()
-      comment.toggle.linewise(vim.fn.visualmode())
-    end, { desc = 'Toggle comment on selected lines' })
+    vim.keymap.set('v', '<C-/>', require('Comment.api').toggle.linewise(vim.fn.visualmode()), options)
 
     -- Optional: Blockwise comment toggling
-    vim.keymap.set('n', '<C-b>', function()
-      comment.toggle.blockwise.current()
-    end, { desc = 'Toggle block comment on current line' })
+    vim.keymap.set('n', '<C-b>', require('Comment.api').toggle.blockwise.current(), options)
 
-    vim.keymap.set('v', '<C-b>', function()
-      comment.toggle.blockwise(vim.fn.visualmode())
-    end, { desc = 'Toggle block comment on selected lines' })
+    vim.keymap.set('v', '<C-b>', require('Comment.api').toggle.blockwise(vim.fn.visualmode()), options)
   end,
 }
