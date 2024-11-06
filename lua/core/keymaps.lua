@@ -78,3 +78,5 @@ map('n', '<leader>sr', [[:%s///gc<Left><Left><Left>]], { desc = 'Prompted search
 -- Explicitly yank to system clipboard (highlighted and entire row)
 map({ 'n', 'v' }, '<leader>y', [["+y]])
 map('n', '<leader>Y', [["+Y]])
+
+map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })

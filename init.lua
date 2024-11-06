@@ -11,7 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
---
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
   require 'plugins.alpha',
@@ -27,10 +26,11 @@ require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.lualine',
   require 'plugins.misc',
-  require 'plugins.neotree',
+  -- require 'plugins.neotree',
   require 'plugins.noice',
   require 'plugins.obsidian',
   require 'plugins.telescope',
   require 'plugins.toggleterm',
   require 'plugins.treesitter',
+  require 'plugins.oil',
 }
