@@ -2,6 +2,20 @@
 return {
   'nvim-telescope/telescope.nvim',
   branch = '0.1.x',
+  lazy = true, -- Enable lazy loading
+  keys = {
+    { '<leader>rf' },
+    { '<leader>sb' },
+    { '<leader>sm' },
+    { '<leader>sf' },
+    { '<leader>sh' },
+    { '<leader>sw' },
+    { '<leader>sg' },
+    { '<leader>s.' },
+    { '<leader><leader>' },
+    { '<leader>s/' },
+    { '<leader>/' },
+  },
   dependencies = {
     'nvim-lua/plenary.nvim',
     -- Fuzzy Finder Algorithm which requires local dependencies to be built.
@@ -25,8 +39,8 @@ return {
         mappings = {
           i = {
             ['<C-k>'] = require('telescope.actions').move_selection_previous, -- move to prev result
-            ['<C-j>'] = require('telescope.actions').move_selection_next, -- move to next result
-            ['<C-l>'] = require('telescope.actions').select_default, -- open file
+            ['<C-j>'] = require('telescope.actions').move_selection_next,     -- move to next result
+            ['<C-l>'] = require('telescope.actions').select_default,          -- open file
           },
         },
       },

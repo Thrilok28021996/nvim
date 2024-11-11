@@ -1,5 +1,15 @@
 return {
   'mfussenegger/nvim-dap',
+  lazy = true, -- Enable lazy loading
+  keys = {
+    { '<F5>', mode = 'n' },
+    { '<F1>', mode = 'n' },
+    { '<F2>', mode = 'n' },
+    { '<F3>', mode = 'n' },
+    { '<F7>', mode = 'n' },
+    { '<leader>b', mode = 'n' },
+    { '<leader>B', mode = 'n' },
+  },
   dependencies = {
     -- Creates a beautiful debugger UI
     'rcarriga/nvim-dap-ui',

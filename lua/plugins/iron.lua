@@ -1,5 +1,20 @@
 return {
   'hkupty/iron.nvim',
+  lazy = true, -- Enable lazy loading
+  keys = {
+    { '<space>im', mode = 'n' },
+    { '<space>iv', mode = 'v' },
+    { '<space>if', mode = 'n' },
+    { '<space>il', mode = 'n' },
+    { '<space>im', mode = 'n' },
+    { '<space>mm', mode = 'n' },
+    { '<space>mv', mode = 'v' },
+    { '<space>rm', mode = 'n' },
+    { '<space>s<cr>', mode = 'n' },
+    { '<space>s<space>', mode = 'n' },
+    { '<space>ie', mode = 'n' },
+    { '<space>ic', mode = 'n' },
+  },
   config = function()
     require('iron.core').setup {
       config = {

@@ -1,6 +1,13 @@
 -- Easily comment visual regions/lines
 return {
   'numToStr/Comment.nvim',
+  lazy = true, -- Enable lazy loading
+  keys = {
+    { '<C-/>', mode = 'n' },
+    { '<C-/>', mode = 'v' },
+    { '<C-b>', mode = 'n' },
+    { '<C-b>', mode = 'v' },
+  },
   opts = {},
   config = function()
     require('Comment').setup {

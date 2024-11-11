@@ -2,13 +2,16 @@
 -- Format on save and linters
 return {
   'nvimtools/none-ls.nvim',
+  lazy = true, -- Enable lazy loading
+  event = { 'BufReadPre', 'BufNewFile' }, -- Load the plugin when reading or creating a file
+
   dependencies = {
     'nvimtools/none-ls-extras.nvim',
     'jayp0521/mason-null-ls.nvim', -- ensure dependencies are installed
   },
   config = function()
     local null_ls = require 'null-ls'
-    local formatting = null_ls.builtins.formatting   -- to setup formatters
+    local formatting = null_ls.builtins.formatting -- to setup formatters
     local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
     -- list of formatters & linters for mason to install
@@ -17,7 +20,7 @@ return {
 
         'stylua', -- lua formatter
 
-        'ruff',   -- Python linter and formatter
+        'ruff', -- Python linter and formatter
       },
       -- auto-install configured formatters & linters (with null-ls)
       automatic_installation = true,
