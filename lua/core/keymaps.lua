@@ -79,4 +79,7 @@ map('n', '<leader>sr', [[:%s///gc<Left><Left><Left>]], { desc = 'Prompted search
 map({ 'n', 'v' }, '<leader>y', [["+y]])
 map('n', '<leader>Y', [["+Y]])
 
+-- Map Ctrl+a to select all in normal mode
+map('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
+
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
