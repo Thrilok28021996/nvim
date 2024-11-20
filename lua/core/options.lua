@@ -56,3 +56,8 @@ vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins fro
 -- vim.opt.foldnestmax = 4
 -- vim.opt.foldclose = 'all'
 -- vim.opt.fillchars:append 'fold:*'
+--
+-- Better terminal experience
+
+vim.opt.termguicolors = true
+

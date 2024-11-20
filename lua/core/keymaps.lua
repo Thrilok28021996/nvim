@@ -83,3 +83,5 @@ map('n', '<leader>Y', [["+Y]])
 map('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+-- Terminal
+vim.keymap.set("n", "<C-t>", '<CMD>terminal<CR>i', { desc = "Toggle Terminal" })
