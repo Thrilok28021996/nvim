@@ -41,23 +41,16 @@ vim.opt.shortmess:append 'c'                         -- don't give |ins-completi
 vim.opt.iskeyword:append '-'                         -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' }       -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins from neovim in case vim still in use
+vim.o.foldenable = true                              -- Enable folding
+vim.o.foldcolumn = '1'                               -- Show fold column
+vim.o.foldlevel = 99                                 -- Start with all folds open
+vim.o.foldlevelstart = 99                            -- Open all folds when starting
 
--- Folding the code
--- -- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
--- vim.opt.foldcolumn = 'auto'
--- -- Set the default folding method for all files
--- vim.opt.foldmethod = 'expr' -- Use expression-based folding (e.g., with Tree-sitter)
---
--- -- Set the fold expression if using Tree-sitter
--- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
--- vim.opt.foldtext = ''
--- vim.opt.foldlevel = 99
--- vim.opt.foldlevelstart = 1
--- vim.opt.foldnestmax = 4
--- vim.opt.foldclose = 'all'
--- vim.opt.fillchars:append 'fold:*'
---
--- Better terminal experience
-
-vim.opt.termguicolors = true
-
+vim.wo.foldmethod = "expr"                           -- Method for Folding the code
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.fillchars = {
+    fold = " ", -- Character for folded text
+    foldopen = "", -- Character for open folds
+    foldclose = "", -- Character for closed folds
+    foldsep = " ", -- Character for separating folds
+}
